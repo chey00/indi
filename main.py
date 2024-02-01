@@ -1,16 +1,12 @@
-# This is a sample Python script.
+from PyQt6.QtWidgets import QApplication
+from MainWindow import MainWindow
+import sys
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+# All you need is https://doc.qt.io/qtforpython-6/
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    application = QApplication(sys.argv)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main_window = MainWindow()
+    main_window.show()
+
+    application.exec()
